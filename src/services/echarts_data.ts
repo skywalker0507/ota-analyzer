@@ -69,6 +69,10 @@ export class EchartsData {
       text: this.title,
       left: 'center'
     }
+    // option.tooltip = {
+    //   trigger: 'item',
+    //   formatter: '{a} <br/>{b} : {c} ' + this.unit + ' ({d}%)'
+    // }
     option.tooltip = {
       trigger: 'item',
       formatter: (params:any) => {
