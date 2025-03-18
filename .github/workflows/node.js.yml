@@ -32,7 +32,6 @@ jobs:
         with:
           branch: 'master'
           folder: 'dist'
-          ssh-key: '${{ secrets.SSH_KEY }}'
           clean: false
-          repository-name: 'android/android.github.io'
+          repository-name: 'skywalker0507/skywalker0507.github.io'
           target-folder: 'analyseOTA'
