@@ -30,7 +30,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
-          branch: 'master'
+          branch: 'main'
           folder: 'dist'
           ssh-key: '${{ secrets.SSH_KEY }}'
           clean: false
