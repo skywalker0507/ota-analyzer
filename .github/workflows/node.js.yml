@@ -32,6 +32,7 @@ jobs:
         with:
           branch: 'master'
           folder: 'dist'
+          token: ${{ secrets.GITHUB_TOKEN }}
           clean: false
           repository-name: 'skywalker0507/skywalker0507.github.io'
           target-folder: 'analyseOTA'
