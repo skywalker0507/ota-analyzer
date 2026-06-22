@@ -1,0 +1,28 @@
+name: Node.js CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
+        with:
+          branch: main
+          folder: dist
+          ssh-key: ${{ secrets.SSH_KEY }}
+          clean: false
+          repository-name: skywalker0507/skywalker0507.github.io
+          target-folder: analyseOTA
