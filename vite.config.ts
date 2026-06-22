@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/analyseOTA/' : '/',
+  base: mode === 'production' ? '/ota-analyzer/' : '/',
   plugins: [
     vue(),
     vuetify({ autoImport: true })
